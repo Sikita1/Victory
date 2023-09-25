@@ -6,40 +6,20 @@ using YG;
 
 public class ButtonsLose : MonoBehaviour
 {
-    //[SerializeField] private PanelTimer _panelTimer;
-    //[SerializeField] private Button _button;
     [SerializeField] private Timer _timer;
-    //[SerializeField] private LosePanel _losePanel;
+    [SerializeField] private Pause _pause;
 
-    //[SerializeField] private ButtonClick _buttonClick;
+    private void OnEnable()
+    {
+        YandexGame.RewardVideoEvent += OnRewarded;
+        YandexGame.ErrorVideoEvent += OnRewardFailed;
+    }
 
-    //[SerializeField] private float _adCooldown;
-
-    //private float _nowTime;
-
-    //private void Start()
-    //{
-    //    _timer.text = _adCooldown.ToString();
-    //}
-
-    //private void Update()
-    //{
-    //    if (_adCooldown > 0)
-    //    {
-    //        _button.interactable = false;
-    //        _panelTimer.gameObject.SetActive(true);
-    //        _adCooldown -= Time.unscaledDeltaTime;
-    //        _timer.text = Mathf.Round(_adCooldown).ToString();
-
-    //        if (_adCooldown < 0.1f)
-    //            _adCooldown = 0f;
-    //    }
-    //    else
-    //    {
-    //        _panelTimer.gameObject.SetActive(false);
-    //        _button.interactable = true;
-    //    }
-    //}
+    private void OnDisable()
+    {
+        YandexGame.RewardVideoEvent -= OnRewarded;
+        YandexGame.ErrorVideoEvent -= OnRewardFailed;
+    }
 
     public void OpenMenuClick()
     {
@@ -49,16 +29,13 @@ public class ButtonsLose : MonoBehaviour
 
     public void ContinuePlaying()
     {
-        YandexGame.Instance.RewardVideo(0);
-        YandexGame.RewardVideoEvent += OnRewarded;
-        YandexGame.ErrorVideoEvent += OnRewardFailed;
-        //Time.timeScale = 1f;
-        //gameObject.SetActive(false);
-        //_timer.SetTotalTime();
-        //YandexGame.FullscreenShow
+        //YandexGame.Instance.RewardVideo(0);
+        //YandexGame.RewardVideoEvent += OnRewarded;
+        //YandexGame.ErrorVideoEvent += OnRewardFailed;
+        OpenRewardAd(0);
     }
 
-    private void ExampleOpenRewardAd(int id)
+    private void OpenRewardAd(int id)
     {
         YandexGame.RewVideoShow(id);
     }
@@ -68,25 +45,15 @@ public class ButtonsLose : MonoBehaviour
         if (id != 0)
             return;
 
-        OnRewardFailed();
-
         Time.timeScale = 1f;
-
-        //if (_adCooldown == 0f)
-        //    _adCooldown = 10f;
-
-        //_buttonClick.Winner();
         gameObject.SetActive(false);
         _timer.SetTotalTime();
+        _pause.gameObject.SetActive(true);
     }
 
     private void OnRewardFailed()
     {
-        YandexGame.RewardVideoEvent -= OnRewarded;
-        YandexGame.ErrorVideoEvent -= OnRewardFailed;
+        //YandexGame.RewardVideoEvent -= OnRewarded;
+        //YandexGame.ErrorVideoEvent -= OnRewardFailed;
     }
-
-    //private bool CanShowADS => NowTimer() > 0;
-
-    //private float NowTimer() => _nowTime - Time.unscaledTime;
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ControllerFocus : MonoBehaviour
 {
@@ -18,10 +19,11 @@ public class ControllerFocus : MonoBehaviour
     {
         if (_isFocus == true)
         {
-            Time.timeScale = 1f;
+            Time.timeScale = 0f;
 
-            if (_losePanel.gameObject.activeSelf == true)
-                Time.timeScale = 0f;
+            if (_losePanel.gameObject.activeSelf == false
+             && _pause.gameObject.activeSelf == false)
+                Time.timeScale = 1f;
         }
         else
         {

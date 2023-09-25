@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
+using UnityEngine.Events;
 
 public class ButtonClick : MonoBehaviour
 {
@@ -12,12 +13,15 @@ public class ButtonClick : MonoBehaviour
     [SerializeField] protected Button _button;
     [SerializeField] private LosePanel _lose;
     [SerializeField] private Timer _timer;
+    //[SerializeField] private Score _score;
 
     private Color _defaultColor;
     private Coroutine _coroutineWin;
     private Coroutine _coroutineLose;
 
     protected string Notification;
+
+    public event UnityAction ScoreUp;
 
     public void Check()
     {
@@ -36,6 +40,8 @@ public class ButtonClick : MonoBehaviour
         _tasks.OrganizeTextIntoQuestions();
         _button.image.color = _defaultColor;
         _timer.SetTotalTime();
+        ScoreUp?.Invoke();
+        //_score.IncreaseValue();
         EventSystem.current.SetSelectedGameObject(null);
     }
 

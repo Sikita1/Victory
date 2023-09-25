@@ -3261,6 +3261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timer: {fileID: 2040606273}
+  _pause: {fileID: 559612330}
 --- !u!114 &1753059933
 MonoBehaviour:
   m_ObjectHideFlags: 0
