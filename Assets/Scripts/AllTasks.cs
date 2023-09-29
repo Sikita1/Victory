@@ -18,10 +18,14 @@ public class AllTasks : MonoBehaviour
 
     private int _answerOptions = 4;
 
-    private void Start()
+    private void Awake()
     {
         _tasksList = new List<string>();
         FillListTasks();
+    }
+
+    private void Start()
+    {
         OrganizeTextIntoQuestions();
     }
 
@@ -35,16 +39,21 @@ public class AllTasks : MonoBehaviour
 
     public void OrganizeTextIntoQuestions()
     {
-        int randomLine = Random.Range(0, _tasksList.Count);
-        _currentTask = _tasksList[randomLine];
-        _split = _currentTask.Split('/');
-        _responsesArray = _split[1].Split(';');
+        if (_tasksList.Count > 0)
+        {
+            int randomLine = Random.Range(0, _tasksList.Count);
+            _currentTask = _tasksList[randomLine];
+            _split = _currentTask.Split('/');
+            _responsesArray = _split[1].Split(';');
 
-        _questionText.text = _split[0];
-        _trueResponse = _responsesArray[0];
+            _questionText.text = _split[0];
+            _trueResponse = _responsesArray[0];
 
-        RandomResponses(Shaffle(_responsesArray));
+            RandomResponses(Shaffle(_responsesArray));
+        }
     }
+
+    public int GetCount() => _tasksList.Count;
 
     private void FillListTasks()
     {
