@@ -30,6 +30,7 @@ public class AllTasks : MonoBehaviour
     }
 
     public string GetTrueResponse() => _trueResponse;
+    public int GetCount() => _tasksList.Count;
 
     public List<string> DeleteCurentTask()
     {
@@ -52,8 +53,6 @@ public class AllTasks : MonoBehaviour
             RandomResponses(Shaffle(_responsesArray));
         }
     }
-
-    public int GetCount() => _tasksList.Count;
 
     private void FillListTasks()
     {

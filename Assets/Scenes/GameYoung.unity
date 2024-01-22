@@ -1295,9 +1295,9 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.23584908, g: 0.21916164, b: 0.21916164, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
     m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1354,15 +1354,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _notification: {fileID: 66056249}
-  _currentAnswer: {fileID: 1831326864}
   _tasks: {fileID: 1777187920}
   _button: {fileID: 430662390}
+  _currentAnswer: {fileID: 1831326864}
   _lose: {fileID: 1753059933}
   _timer: {fileID: 2040606273}
   _score: {fileID: 820360052}
   _panelWin: {fileID: 1190284821}
   _right: {fileID: 8300000, guid: f0afe0f9702499845ab9d4972ceb9736, type: 3}
   _wrong: {fileID: 8300000, guid: 17d2fcdc823d5cd4b824fe36cab8097a, type: 3}
+  _music: {fileID: 430662393}
   _trueColor: {r: 0.07058824, g: 1, b: 0, a: 1}
   _falseColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!82 &430662393
@@ -1874,6 +1875,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pause: {fileID: 559612330}
   _losePanel: {fileID: 1753059933}
+  _panelWin: {fileID: 1190284821}
 --- !u!1 &703713076
 GameObject:
   m_ObjectHideFlags: 0
@@ -1957,7 +1959,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 703713079}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1753059932}
+        m_TargetAssemblyTypeName: ButtonsLose, Assembly-CSharp
+        m_MethodName: OpenMenuClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &703713079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3005,9 +3019,9 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.3207547, g: 0.30411178, b: 0.30411178, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
     m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -3089,15 +3103,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _notification: {fileID: 66056249}
-  _currentAnswer: {fileID: 988551637}
   _tasks: {fileID: 1777187920}
   _button: {fileID: 1366837522}
+  _currentAnswer: {fileID: 988551637}
   _lose: {fileID: 1753059933}
   _timer: {fileID: 2040606273}
   _score: {fileID: 820360052}
   _panelWin: {fileID: 1190284821}
   _right: {fileID: 8300000, guid: f0afe0f9702499845ab9d4972ceb9736, type: 3}
   _wrong: {fileID: 8300000, guid: 17d2fcdc823d5cd4b824fe36cab8097a, type: 3}
+  _music: {fileID: 430662393}
   _trueColor: {r: 0.07058824, g: 1, b: 0, a: 1}
   _falseColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!82 &1366837527
@@ -3635,9 +3650,9 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.3207547, g: 0.30411178, b: 0.30411178, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
     m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -3694,15 +3709,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _notification: {fileID: 66056249}
-  _currentAnswer: {fileID: 92435660}
   _tasks: {fileID: 1777187920}
   _button: {fileID: 1593197094}
+  _currentAnswer: {fileID: 92435660}
   _lose: {fileID: 1753059933}
   _timer: {fileID: 2040606273}
   _score: {fileID: 820360052}
   _panelWin: {fileID: 1190284821}
   _right: {fileID: 8300000, guid: f0afe0f9702499845ab9d4972ceb9736, type: 3}
   _wrong: {fileID: 8300000, guid: 17d2fcdc823d5cd4b824fe36cab8097a, type: 3}
+  _music: {fileID: 430662393}
   _trueColor: {r: 0.07058824, g: 1, b: 0, a: 1}
   _falseColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!82 &1593197097
@@ -4514,9 +4530,9 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.23584908, g: 0.21916164, b: 0.21916164, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
     m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -4598,15 +4614,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _notification: {fileID: 66056249}
-  _currentAnswer: {fileID: 253428882}
   _tasks: {fileID: 1777187920}
   _button: {fileID: 1869300673}
+  _currentAnswer: {fileID: 253428882}
   _lose: {fileID: 1753059933}
   _timer: {fileID: 2040606273}
   _score: {fileID: 820360052}
   _panelWin: {fileID: 1190284821}
   _right: {fileID: 8300000, guid: f0afe0f9702499845ab9d4972ceb9736, type: 3}
   _wrong: {fileID: 8300000, guid: 17d2fcdc823d5cd4b824fe36cab8097a, type: 3}
+  _music: {fileID: 430662393}
   _trueColor: {r: 0.07058824, g: 1, b: 0, a: 1}
   _falseColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!82 &1869300678

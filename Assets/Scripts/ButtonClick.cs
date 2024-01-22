@@ -1,40 +1,35 @@
-using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
-using UnityEngine.EventSystems;
 using UnityEngine.Events;
+using System.Collections;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(AudioSource))]
 public class ButtonClick : MonoBehaviour
 {
-    [SerializeField] protected TMP_Text _notification;
-    [SerializeField] private TMP_Text _currentAnswer;
-    [SerializeField] protected AllTasks _tasks;
     [SerializeField] protected Button _button;
-    [SerializeField] private LosePanel _lose;
-    [SerializeField] private Timer _timer;
+    [SerializeField] protected AllTasks _tasks;
+    [SerializeField] protected TMP_Text _notification;
 
+    [SerializeField] private Timer _timer;
     [SerializeField] private Score _score;
+    [SerializeField] private LosePanel _lose;
     [SerializeField] private PanelWin _panelWin;
+    [SerializeField] private TMP_Text _currentAnswer;
 
     [SerializeField] private AudioClip _right;
     [SerializeField] private AudioClip _wrong;
+
+    [SerializeField] private AudioSource _music;
 
     public event UnityAction ScoreUp;
 
     protected string Notification;
 
-    private AudioSource _music;
-
     private Color _defaultColor;
     private Coroutine _coroutineWin;
     private Coroutine _coroutineLose;
-
-    private void Start()
-    {
-        _music = GetComponent<AudioSource>();
-    }
 
     public void Check()
     {
@@ -49,6 +44,7 @@ public class ButtonClick : MonoBehaviour
 
     protected virtual IEnumerator Win()
     {
+        _button.interactable = false;
         _music.PlayOneShot(_right);
         yield return new WaitForSeconds(1f);
         _tasks.OrganizeTextIntoQuestions();
@@ -56,17 +52,20 @@ public class ButtonClick : MonoBehaviour
         _timer.SetTotalTime();
         ScoreUp?.Invoke();
         Victory();
+        _button.interactable = true;
         EventSystem.current.SetSelectedGameObject(null);
     }
 
     protected virtual IEnumerator Lose(string notification)
     {
+        _button.interactable = false;
         _music.PlayOneShot(_wrong);
         Time.timeScale = 0f;
         yield return new WaitForSecondsRealtime(1f);
         _button.image.color = _defaultColor;
         _notification.text = notification;
         _lose.gameObject.SetActive(true);
+        _button.interactable = true;
         EventSystem.current.SetSelectedGameObject(null);
     }
 

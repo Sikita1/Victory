@@ -7,3 +7,4 @@ public class Buttons : MonoBehaviour
     public void OpenGameAbstruse() => SceneManager.LoadScene("GameAbstruse");
     public void OpenGameAncient() => SceneManager.LoadScene("GameAncient");
 }
+

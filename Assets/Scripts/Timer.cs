@@ -32,5 +32,5 @@ public class Timer : MonoBehaviour
         }
     }
 
-    public float SetTotalTime() => _totalTime = 15f;
+    public float SetTotalTime() => _totalTime = 20f;
 }

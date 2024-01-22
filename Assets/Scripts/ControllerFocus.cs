@@ -7,6 +7,7 @@ public class ControllerFocus : MonoBehaviour
 {
     [SerializeField] private Pause _pause;
     [SerializeField] private LosePanel _losePanel;
+    [SerializeField] private PanelWin _panelWin;
 
     private bool _isFocus;
 
@@ -22,7 +23,8 @@ public class ControllerFocus : MonoBehaviour
             Time.timeScale = 0f;
 
             if (_losePanel.gameObject.activeSelf == false
-             && _pause.gameObject.activeSelf == false)
+             && _pause.gameObject.activeSelf == false
+             && _panelWin.gameObject.activeSelf == false)
                 Time.timeScale = 1f;
         }
         else
