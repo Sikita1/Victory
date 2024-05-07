@@ -1,7 +1,5 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using TMPro;
-using UnityEngine.UI;
 using YG;
 
 public class ButtonsLose : MonoBehaviour
@@ -12,13 +10,11 @@ public class ButtonsLose : MonoBehaviour
     private void OnEnable()
     {
         YandexGame.RewardVideoEvent += OnRewarded;
-        YandexGame.ErrorVideoEvent += OnRewardFailed;
     }
 
     private void OnDisable()
     {
         YandexGame.RewardVideoEvent -= OnRewarded;
-        YandexGame.ErrorVideoEvent -= OnRewardFailed;
     }
 
     public void OpenMenuClick()
@@ -49,11 +45,5 @@ public class ButtonsLose : MonoBehaviour
         gameObject.SetActive(false);
         _timer.SetTotalTime();
         _pause.gameObject.SetActive(true);
-    }
-
-    private void OnRewardFailed()
-    {
-        //YandexGame.RewardVideoEvent -= OnRewarded;
-        //YandexGame.ErrorVideoEvent -= OnRewardFailed;
     }
 }

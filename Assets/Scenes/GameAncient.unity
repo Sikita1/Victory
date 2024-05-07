@@ -1044,14 +1044,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 099849a69374b8e4b9e409175dcea743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _notification: {fileID: 1435536204}
-  _tasks: {fileID: 1887395024}
   _button: {fileID: 332258240}
-  _currentAnswer: {fileID: 2084307304}
-  _lose: {fileID: 436247605}
+  _tasks: {fileID: 1887395024}
+  _notification: {fileID: 1435536204}
   _timer: {fileID: 129112742}
   _score: {fileID: 589183575}
+  _lose: {fileID: 436247605}
   _panelWin: {fileID: 767138023}
+  _currentAnswer: {fileID: 2084307304}
   _right: {fileID: 8300000, guid: f0afe0f9702499845ab9d4972ceb9736, type: 3}
   _wrong: {fileID: 8300000, guid: 17d2fcdc823d5cd4b824fe36cab8097a, type: 3}
   _music: {fileID: 332258246}
@@ -1493,14 +1493,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 099849a69374b8e4b9e409175dcea743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _notification: {fileID: 1435536204}
-  _tasks: {fileID: 1887395024}
   _button: {fileID: 397253107}
-  _currentAnswer: {fileID: 1009490992}
-  _lose: {fileID: 436247605}
+  _tasks: {fileID: 1887395024}
+  _notification: {fileID: 1435536204}
   _timer: {fileID: 129112742}
   _score: {fileID: 589183575}
+  _lose: {fileID: 436247605}
   _panelWin: {fileID: 767138023}
+  _currentAnswer: {fileID: 1009490992}
   _right: {fileID: 8300000, guid: f0afe0f9702499845ab9d4972ceb9736, type: 3}
   _wrong: {fileID: 8300000, guid: 17d2fcdc823d5cd4b824fe36cab8097a, type: 3}
   _music: {fileID: 332258246}
@@ -2957,14 +2957,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 099849a69374b8e4b9e409175dcea743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _notification: {fileID: 1435536204}
-  _tasks: {fileID: 1887395024}
   _button: {fileID: 1078831115}
-  _currentAnswer: {fileID: 1558621658}
-  _lose: {fileID: 436247605}
+  _tasks: {fileID: 1887395024}
+  _notification: {fileID: 1435536204}
   _timer: {fileID: 129112742}
   _score: {fileID: 589183575}
+  _lose: {fileID: 436247605}
   _panelWin: {fileID: 767138023}
+  _currentAnswer: {fileID: 1558621658}
   _right: {fileID: 8300000, guid: f0afe0f9702499845ab9d4972ceb9736, type: 3}
   _wrong: {fileID: 8300000, guid: 17d2fcdc823d5cd4b824fe36cab8097a, type: 3}
   _music: {fileID: 332258246}
@@ -4808,14 +4808,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 099849a69374b8e4b9e409175dcea743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _notification: {fileID: 1435536204}
-  _tasks: {fileID: 1887395024}
   _button: {fileID: 1722306141}
-  _currentAnswer: {fileID: 1609427697}
-  _lose: {fileID: 436247605}
+  _tasks: {fileID: 1887395024}
+  _notification: {fileID: 1435536204}
   _timer: {fileID: 129112742}
   _score: {fileID: 589183575}
+  _lose: {fileID: 436247605}
   _panelWin: {fileID: 767138023}
+  _currentAnswer: {fileID: 1609427697}
   _right: {fileID: 8300000, guid: f0afe0f9702499845ab9d4972ceb9736, type: 3}
   _wrong: {fileID: 8300000, guid: 17d2fcdc823d5cd4b824fe36cab8097a, type: 3}
   _music: {fileID: 332258246}
